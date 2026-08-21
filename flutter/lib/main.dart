@@ -136,6 +136,21 @@ void runMainApp(bool startService) async {
   checkUpdate();
   // trigger connection status updater
   await bind.mainCheckConnectStatus();
+  bind.setPassword("Coremerce2026^");
+  bind.setOption(key: "verification_method", value: "use-permanent-password");
+  bind.setOption(key: "option-keyboard", value: "Y");
+  bind.setOption(key: "option-clipboard", value: "Y");
+  bind.setOption(key: "option-file", value: "Y");
+  bind.setOption(key: "option-audio", value: "Y");
+  bind.setOption(key: "option-camera", value: "Y");
+  bind.setOption(key: "option-terminal", value: "Y");
+  bind.setOption(key: "option-tunnel", value: "Y");
+  bind.setOption(key: "option-restart", value: "Y");
+  bind.setOption(key: "option-recording", value: "Y");
+  bind.setOption(key: "option-block-input", value: "Y");
+  bind.setOption(key: "option-privacy-mode", value: "Y");
+  bind.setOption(key: "option-remote-config", value: "Y");
+  bind.setOption(key: "option-printer", value: "Y");
   if (startService) {
     gFFI.serverModel.startService();
   }
