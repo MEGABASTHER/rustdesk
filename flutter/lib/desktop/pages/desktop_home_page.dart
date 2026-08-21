@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
@@ -85,9 +86,16 @@ class _DesktopHomePageState extends State<DesktopHomePage>
           alignment: Alignment.center,
           child: loadPowered(context),
         ),
-      Align(
+    Align(
         alignment: Alignment.center,
-        child: loadLogo(),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 15, bottom: 10, left: 15, right: 15),
+          child: SvgPicture.asset(
+            'assets/logo.svg',
+            height: 40,
+            fit: BoxFit.contain,
+          ),
+        ),
       ),
       buildTip(context),
       if (!isOutgoingOnly) buildIDBoard(context),
